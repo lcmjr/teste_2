@@ -40,7 +40,7 @@ ul,li{
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
+    left: 0px;
 }
 #publicidade-topo {
     text-align: center;
@@ -79,11 +79,6 @@ ul,li{
 }
 #redes-sociais-topo a {
     margin-left: 20px;
-}
-.menu-principal {
-    float: left;
-    transition: 0.25s;
-    margin: -25px 0;
 }
 .menu-principal>li {
     float: left;
@@ -149,22 +144,6 @@ ul,li{
 #menu-secundario a {
     margin: 0 32px;
     text-transform: uppercase;
-}
-.scroll-menu #redes-sociais-topo {
-    height: 21px;
-}
-.scroll-menu .btn-assine {
-    width: auto;
-    padding: 4px 5px;
-}
-.scroll-menu#menu-principal-container {
-    padding: 17px 0 14px 20px;
-}
-.scroll-menu .menu-principal {
-    margin: -17px 0;
-}
-.scroll-menu .link-menu-principal {
-    padding: 23px 10px 22px;
 }
 .conteudo-menu-dropdown {
     position: absolute;
@@ -246,15 +225,15 @@ ul,li{
     background: #474747;
 }
 .link-menu-dropdown-testes::after {
-     content: '';
-     float: right;
-     background: url(imagens/seta-menu-dropdown-2.png);
-     width: 7px;
-     height: 10px;
-     margin: 4px -12px 0 0;
-     transition: 0.15s;
-     opacity: 0;
- }
+    content: '';
+    float: right;
+    background: url(imagens/seta-menu-dropdown-2.png);
+    width: 7px;
+    height: 10px;
+    margin: 4px -12px 0 0;
+    transition: 0.15s;
+    opacity: 0;
+}
 .link-menu-dropdown-testes:hover::after, .link-menu-dropdown-testes-ativo::after{
     opacity: 1;
 }
@@ -278,4 +257,123 @@ ul,li{
     margin: 10px 0 0;
     color: #ed1c24;
     font-weight: normal;
+}
+#btn-lupa, #btn-menu{
+    display: none;
+}
+@media (min-width: 1371px) {
+    .scroll-menu #redes-sociais-topo {
+        height: 21px;
+    }
+    .scroll-menu .btn-assine {
+        width: auto;
+        padding: 4px 5px;
+    }
+    .scroll-menu#menu-principal-container {
+        padding: 17px 0 14px 20px;
+    }
+    .scroll-menu .menu-principal {
+        margin: -17px 0;
+    }
+    .scroll-menu .link-menu-principal {
+        padding: 23px 10px 22px;
+    }
+    .menu-principal {
+        float: left;
+        transition: 0.25s;
+        margin: -25px 0;
+    }
+    .menu-principal, .container-busca {
+        display:block!important;
+    }
+}
+@media (max-width: 1370px) {
+    body{
+        background: url("imagens/conteudo-responsivo.png") no-repeat top center #e6e6e6;
+        height: 700px;
+    }
+    #redes-sociais-topo, .btn-assine, .container-busca, .menu-principal, #menu-secundario, #logo-topo img{
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+    #btn-lupa, #btn-menu, #logo-topo{
+        display: block;
+    }
+    #btn-lupa{
+        float: left;
+        background: url("imagens/lupa-busca-responsivo.png");
+        width: 16px;
+        height: 16px;
+        margin: 19px 0 0 20px;
+        cursor: pointer;
+    }
+    #btn-menu{
+        transition: 0.15s;
+        width: 60px;
+        float: right;
+        cursor: pointer;
+        height: 54px;
+        background: url("imagens/menu-btn.png") center center no-repeat;
+    }
+    #btn-menu.btn-menu-ativo{
+        background-image: url("imagens/menu-btn-fechar.png");
+        background-color: #d41f1f;
+    }
+    #logo-topo {
+        width: 150px;
+        height: 32px;
+        background: url("imagens/logo-responsivo.png");
+        margin: 11px 0 0 -75px;
+        position: absolute;
+        left: 50%;
+    }
+    #menu-principal-container, .scroll-menu#menu-principal-container {
+        padding: 0;
+    }
+    #publicidade-topo img {
+        width: 90%;
+        max-width: 729px;
+    }
+    .menu-principal, .container-busca{
+        clear: both;
+        width: 100%;
+        margin: 0;
+        background: #d41f1f;
+    }
+    .link-menu-principal {
+        float: none;
+        display: block;
+        padding: 10px 20px 10px;
+        border-top: 1px solid #c21c1c;
+    }
+    .menu-principal>li {
+        display: block;
+        float: none;
+    }
+    .menu-principal .dropdown:first-child>a {
+        border: none;
+    }
+    .menu-dropdown {
+        display: none!important;
+    }
+    .container-busca {
+        position: absolute;
+        top: 50px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .ipt-busca {
+        width: 100%;
+    }
+    #layer-responsiva {
+         position: fixed;
+         background: rgba(0, 0, 0, 0.3);
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         display:none;
+     }
 }

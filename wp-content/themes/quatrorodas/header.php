@@ -10,30 +10,17 @@
     <link href='https://fonts.googleapis.com/css?family=Dosis:700|Asap:400,700' rel='stylesheet' type='text/css'>
     <link href='<?= $link_template;?>/style.css' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script>
-        $(window).ready(function() {
-            $('.dropdown').mouseenter(function(){
-                $(this).children('.menu-dropdown').slideDown(250);
-            }).mouseleave(function(){
-                $(this).children('.menu-dropdown').slideUp(200);
-            });
-        }).scroll(function(){
-            if($(window).scrollTop()>10)
-                $('#menu-principal-container').addClass('scroll-menu');
-            else
-                $('#menu-principal-container').removeClass('scroll-menu');
-        });
-    </script>
-    <!--[if lt IE 9]>
-    <script src="<?= $link_template;?>/js/html5.js"></script>
-    <![endif]-->
+    <script src="<?= $link_template;?>/js/padrao.js"></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<div id="layer-responsiva"></div>
 <header id="topo-fixed">
     <div class="container">
         <div id="publicidade-topo"><a href="#"><img src="<?= $link_template;?>/imagens/banner.png" alt="Publicidade"/></a></div>
         <nav id="menu-principal-container" class="fundo-vermelho">
+            <div id="btn-lupa"></div>
+            <div id="btn-menu"></div>
             <a href="#" id="logo-topo"><img src="<?= $link_template;?>/imagens/logo.png" alt="Logo Quatro Rodas"/></a>
             <div id="redes-sociais-topo">
                 <a href="https://www.facebook.com/quatrorodas" target="_blank"><img src="<?= $link_template;?>/imagens/facebook.png" alt="Facebook Quatro Rodas"/></a>
