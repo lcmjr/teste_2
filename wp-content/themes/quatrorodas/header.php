@@ -9,14 +9,23 @@
     <title>Quatro Rodas</title>
     <link href='https://fonts.googleapis.com/css?family=Dosis:700|Asap:400,700' rel='stylesheet' type='text/css'>
     <link href='<?= $link_template;?>/style.css' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            if($(window).scrollTop()>10)
+                $('#menu-principal-container').addClass('scroll-menu');
+            else
+                $('#menu-principal-container').removeClass('scroll-menu');
+        });
+    </script>
     <!--[if lt IE 9]>
     <script src="<?= $link_template;?>/js/html5.js"></script>
     <![endif]-->
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div class="container">
-    <header>
+<header id="topo-fixed">
+    <div class="container">
         <div id="publicidade-topo"><a href="#"><img src="<?= $link_template;?>/imagens/banner.png" alt="Publicidade"/></a></div>
         <nav id="menu-principal-container" class="fundo-vermelho">
             <a href="#" id="logo-topo"><img src="<?= $link_template;?>/imagens/logo.png" alt="Logo Quatro Rodas"/></a>
@@ -119,7 +128,9 @@
             <a href="#" class="btn-assine">ASSINE</a>
             <div class="clear"></div>
         </nav>
-    </header>
+    </div>
+</header>
+<div class="container">
     <nav id="menu-secundario" class="fundo-cinza">
         <a href="#">+ ACESSADOS</a>
         <a href="#">Salão do automóvel</a>
@@ -133,3 +144,4 @@
         <a href="#">CIVIC</a>
         <a href="#">| A - Z |</a>
     </nav>
+</div>
