@@ -49,10 +49,21 @@ ul,li{
 }
 .menu-dropdown {
     display: none;
+    position: absolute;
+    width: 100%;
+    top: 79px;
+    left: 0;
+    border-bottom: 2px solid #ed1c24;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+}
+.scroll-menu .menu-dropdown {
+    top: 63px;
 }
 #menu-principal-container {
     padding: 25px 10px 22px 20px;
     transition: 0.25s;
+    position: relative;
 }
 #logo-topo {
     float: left;
@@ -140,8 +151,8 @@ ul,li{
     text-transform: uppercase;
 }
 .scroll-menu #redes-sociais-topo {
-     height: 21px;
- }
+    height: 21px;
+}
 .scroll-menu .btn-assine {
     width: auto;
     padding: 4px 5px;
@@ -154,4 +165,117 @@ ul,li{
 }
 .scroll-menu .link-menu-principal {
     padding: 23px 10px 22px;
+}
+.conteudo-menu-dropdown {
+    position: absolute;
+    right: 0;
+    width: 1130px;
+    text-align: left;
+}
+.menu-dropdown>li {
+    display: block;
+    width: 190px;
+}
+.menu-dropdown>li>a{
+    font-size: 15px;
+    display: block;
+    transition: 0.15s;
+}
+.menu-dropdown>li>a:hover {
+    background: #242424;
+    text-decoration: none;
+}
+.menu-dropdown>li:first-child>a {
+    margin-top: 15px;
+}
+.conteudo-menu-carros a {
+    display: block;
+}
+.conteudo-menu-carros li {
+    display: block;
+    padding: 8px;
+}
+.conteudo-menu-carros {
+    height: 150px;
+    top: 10px;
+}
+.menu-dropdown-carros>li:first-child>a {
+    background: #474747;
+    margin: 10px;
+    padding: 6px 0;
+}
+.conteudo-menu-carros {
+    -webkit-column-count: 5;/* Chrome, Safari, Opera */
+    -moz-column-count: 5;/* Firefox */
+    column-count: 5;
+    font-size: 15px;
+}
+.conteudo-menu-testes li {
+    float: left;
+    width: 200px;
+    overflow: hidden;
+    height: 160px;
+    margin-left: 21px;
+}
+.menu-dropdown-carros>li {
+    text-align: center;
+}
+.menu-dropdown-testes>li {
+    text-align: right;
+}
+.link-menu-dropdown-testes {
+    padding: 6px 20px 6px 0;
+}
+.link-menu-dropdown-testes-ativo {
+    background: #242424;
+}
+.conteudo-menu-testes {
+    font-size: 15px;
+}
+.conteudo-menu-testes img {
+    display: block;
+    width: 100%;
+    height: 116px;
+    transition: 0.15s;
+}
+.menu-dropdown-carros {
+    height: 160px;
+}
+.menu-dropdown-testes {
+    height: 210px;
+    background: #474747;
+}
+.link-menu-dropdown-testes::after {
+     content: '';
+     float: right;
+     background: url(imagens/seta-menu-dropdown-2.png);
+     width: 7px;
+     height: 10px;
+     margin: 4px -12px 0 0;
+     transition: 0.15s;
+     opacity: 0;
+ }
+.link-menu-dropdown-testes:hover::after, .link-menu-dropdown-testes-ativo::after{
+    opacity: 1;
+}
+.conteudo-menu-testes {
+    top: 0;
+    padding: 28px 0 22px;
+    box-sizing: border-box;
+}
+.conteudo-menu-testes a:hover {
+    text-decoration: none;
+}
+.conteudo-menu-testes li:hover img {
+    height: 0px;
+}
+.titulo-menu-teste {
+    font-size: 15px;
+    margin: 10px 0 0;
+    height: 36px;
+}
+.ctd-menu-teste {
+    margin: 10px 0 0;
+    color: #ed1c24;
+    font-weight: normal;
 }

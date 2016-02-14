@@ -11,7 +11,13 @@
     <link href='<?= $link_template;?>/style.css' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script>
-        $(window).scroll(function(){
+        $(window).ready(function() {
+            $('.dropdown').mouseenter(function(){
+                $(this).children('.menu-dropdown').slideDown(250);
+            }).mouseleave(function(){
+                $(this).children('.menu-dropdown').slideUp(200);
+            });
+        }).scroll(function(){
             if($(window).scrollTop()>10)
                 $('#menu-principal-container').addClass('scroll-menu');
             else
@@ -38,9 +44,9 @@
             <ul class="menu-principal">
                 <li class="dropdown">
                     <a href="#" class="link-menu-principal">CARROS</a>
-                    <ul class="menu-dropdown">
-                        <li><a href="#">Comparativos</a></li>
-                        <ul class="conteudo-menu-dropdown conteudo-menu-testes">
+                    <ul class="menu-dropdown menu-dropdown-carros fundo-cinza">
+                        <li><a href="#">Ver todos os carros</a></li>
+                        <ul class="conteudo-menu-dropdown conteudo-menu-carros fundo-cinza">
                             <li><a href="#">Audi</a></li>
                             <li><a href="#">Bentley</a></li>
                             <li><a href="#">BMW</a></li>
@@ -66,10 +72,10 @@
                 </li>
                 <li class="dropdown">
                     <a href="#" class="link-menu-principal">TESTES</a>
-                    <ul class="menu-dropdown">
+                    <ul class="menu-dropdown menu-dropdown-testes">
                         <li>
-                            <a href="#">Ver tudo de testes</a>
-                            <ul class="conteudo-menu-dropdown conteudo-menu-testes">
+                            <a href="#" class="link-menu-dropdown-testes link-menu-dropdown-testes-ativo">Ver tudo de testes</a>
+                            <ul class="conteudo-menu-dropdown conteudo-menu-testes fundo-cinza">
                                 <li>
                                     <a href="#">
                                         <img src="<?= $link_template;?>/imagens/conteudo/teste-1.png" alt="Ford Focus Fastback Titanium Plus" />
@@ -80,37 +86,37 @@
                                 <li>
                                     <a href="#">
                                         <img src="<?= $link_template;?>/imagens/conteudo/teste-2.png" alt="Audi A6 2.0 TFSI" />
-                                        <h1 class="titulo">Audi A6 2.0 TFSI</h1>
-                                        <p class="ctd-menu-teste>EcoSport ganha motor 1.6 atrelado à transmissão automatizada de 6...</p>
+                                        <h1 class="titulo-menu-teste">Audi A6 2.0 TFSI</h1>
+                                        <p class="ctd-menu-teste">EcoSport ganha motor 1.6 atrelado à transmissão automatizada de 6...</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="<?= $link_template;?>/imagens/conteudo/teste-3.png" alt="Ford EcoSport 1.6 Powershift" />
-                                        <h1 class="titulo">Ford EcoSport 1.6 Powershift</h1>
+                                        <h1 class="titulo-menu-teste">Ford EcoSport 1.6 Powershift</h1>
                                         <p class="ctd-menu-teste">EcoSport ganha motor 1.6 atrelado à transmissão automatizada de 6...</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="<?= $link_template;?>/imagens/conteudo/teste-4.png" alt="Audi Q3 1.4" />
-                                        <h1 class="titulo">Audi Q3 1.4</h1>
+                                        <h1 class="titulo-menu-teste">Audi Q3 1.4</h1>
                                         <p class="ctd-menu-teste">EcoSport ganha motor 1.6 atrelado à transmissão automatizada de 6...</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <img src="<?= $link_template;?>/imagens/conteudo/teste-5.png" alt="BMW 420i Cabriolet" />
-                                        <h1 class="titulo">BMW 420i Cabriolet</h1>
+                                        <h1 class="titulo-menu-teste">BMW 420i Cabriolet</h1>
                                         <p class="ctd-menu-teste">EcoSport ganha motor 1.6 atrelado à transmissão automatizada de 6...</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#">Comparativos</a></li>
-                        <li><a href="#">Impressões</a></li>
-                        <li><a href="#">Longa duração</a></li>
-                        <li><a href="#">Teste de pista</a></li>
+                        <li><a href="#" class="link-menu-dropdown-testes">Comparativos</a></li>
+                        <li><a href="#" class="link-menu-dropdown-testes">Impressões</a></li>
+                        <li><a href="#" class="link-menu-dropdown-testes">Longa duração</a></li>
+                        <li><a href="#" class="link-menu-dropdown-testes">Teste de pista</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#" class="link-menu-principal">NOTÍCIAS</a></li>
