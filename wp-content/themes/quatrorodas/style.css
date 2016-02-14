@@ -3,3 +3,126 @@ Theme Name: Quatro Rodas
 Author: Luiz Carlos Manhani Junior
 Version: 1.0
 */
+body{
+    margin: 0;
+    background: url("imagens/conteudo.png") no-repeat top center #e6e6e6;
+    font: 12px/1.2 'Dosis', sans-serif;
+    color:white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.clear{
+    clear: both;
+}
+.container{
+    width: 1320px;
+    margin: 0 auto;
+}
+.fundo-vermelho{
+    background: #ed1c24;
+}
+.fundo-cinza{
+    background: #242424;
+}
+#publicidade-topo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.menu-dropdown {
+    display: none;
+}
+#menu-principal-container {
+    padding: 25px 10px 22px 20px;
+}
+#logo-topo {
+    float: left;
+    margin: -8px 0;
+}
+#redes-sociais-topo {
+    float: left;
+    margin: 2px 10px 0 0;
+    width: 151px;
+    height: 0px;
+    overflow: hidden;
+}
+#redes-sociais-topo a {
+    margin-left: 20px;
+}
+.menu-principal {
+    float: left;
+    margin: -25px 0;
+}
+.menu-principal>li {
+    float: left;
+}
+.link-menu-principal {
+    font-size: 15px;
+    padding: 32px 10px 29px;
+    transition: 0.15s;
+    float: left;
+}
+.link-menu-principal:hover, .ativo-menu-dropdown .link-menu-principal{
+    background: #242424;
+    text-decoration: none;
+}
+.dropdown .link-menu-principal::after {
+    content: '';
+    height: 7px;
+    width: 10px;
+    background: url(imagens/seta-menu-dropdown.png);
+    float: right;
+    margin: 5px 0 0 5px;
+}
+.container-busca {
+    float: left;
+    margin: 0 10px 0;
+}
+.ipt-busca {
+    border: 0;
+    padding: 10px 25px 10px 12px;
+    margin: 0;
+    color: #242424;
+    height: 32px;
+    box-sizing: border-box;
+    font: 12px/1.2 'Dosis', sans-serif;
+    width: 130px;
+    float: left;
+}
+.submit-busca {
+    margin: 7px 0 0 -23px;
+    padding: 0;
+    background: url(imagens/lupa-busca.png);
+    border: 0;
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+.btn-assine {
+    background: white;
+    float: left;
+    color: #ed1c24;
+    font-size: 20px;
+    padding: 4px 0;
+    width: 0px;
+    overflow: hidden;
+}
+#menu-secundario {
+    padding: 7px 0;
+    background-image: url(imagens/menu-2-seta.png);
+    background-repeat: no-repeat;
+    background-position: 0px -1px;
+}
+#menu-secundario a {
+    margin: 0 32px;
+    text-transform: uppercase;
+}
